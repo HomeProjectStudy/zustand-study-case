@@ -1,16 +1,15 @@
-import { Button } from './components/button';
-import { useStore } from './store';
+import { Counter } from './components/app/Counter';
+import { UserProfile } from './components/app/UserProfile';
 
 export function App() {
-  const {counter, increment} = useStore();
 
 
   return (
-    <div>
-      <h1>counter: {counter}</h1>
-      <Button type='button' onClick={increment}>
-        Incrementar
-      </Button>
+    <div className='min-h-screen p-6 grid place-content-center'>
+      <div className="space-y-10">
+        <Counter />
+        <UserProfile />
+      </div>
     </div>
   );
 }
