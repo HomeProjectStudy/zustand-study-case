@@ -3,11 +3,18 @@ import { Avatar, AvatarImage, AvatarFallback } from '../Avatar';
 import { Button } from '../Button';
 import { Input } from '../Input';
 import { useForm } from 'react-hook-form';
+import { useShallow } from 'zustand/react/shallow';
 
 
-export function UserProfile(){
+export function UserProfile() {
   console.log('UserProfile rendered!');
-  const { user, setUsername } = useStore();
+
+  const { user, setUsername } = useStore(useShallow(state => ({
+    user: state.user,
+    setUsername: state.setUsername
+
+  })));
+
 
   const form = useForm({
     defaultValues: {
