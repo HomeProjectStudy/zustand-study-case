@@ -6,8 +6,8 @@ export function Counter() {
   console.log('Counter rendered!');
 
   const { counter, increment } = useStore(useShallow(state => ({
-    counter: state.counter,
-    increment: state.increment
+    counter: state.counter.value,
+    increment: state.counter.increment,
   })));
 
 
