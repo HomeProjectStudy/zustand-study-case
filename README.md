@@ -225,3 +225,14 @@ export const useTodoStore = create<TodoState>((set) => ({
 }));
 
 ```
+- Esse padrão segue bem para listas, coleções ou dados mutáveis.
+Se no futuro você quiser persistir o estado (e.g. localStorage) ou usar devtools, Zustand suporta middlewares para isso.
+
+---
+
+## 📝 Considerações e decisões de design usadas
+- Tipagem explícita: sempre declarar a interface do estado e das ações. Facilita manutenção e reduz erros.
+- Separação por domínio: em apps maiores, crie stores/slices separados — evita “God store” e facilita modularidade.
+- Uso de selectors no hook: ao consumir, selecione apenas o que o componente realmente precisa. Isso evita renders desnecessárias.
+- Simplicidade antes de complexidade: inicialmente, mantenha stores simples — só depois, se necessário, acrescente middlewares, persistência, lógica assíncrona.
+- Facilidade de teste e reutilização: stores puros (sem dependências de contexto) ajudam a testar lógica fora de componentes React, se necessário.
