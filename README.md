@@ -6,16 +6,13 @@ Este repositório reúne um estudo de caso para a utilização de Zustand com Re
 ## ✅ Por que usar Zustand
 
 - Zustand é uma solução leve, minimalista e performática para gerenciamento de estado. Não exige providers/contextos — basta usar um hook.
-zustand.site
-+1
+
 
 - Com TypeScript, você tem tipagem forte para estado e ações, garantindo segurança e autocompletar no desenvolvimento.
-zustand.docs.pmnd.rs
-+1
+
 
 - Adequado tanto para apps pequenos quanto para aplicações maiores, com possibilidade de crescer de forma organizada.
-zustand.site
-+1
+
 ---
 
 📦 Instalação
